@@ -3,7 +3,7 @@
 This repository listing public apis with using the above repository
 
 ## Demo
-[Netlify Demo](https://github.com/public-apis/public-apis)
+[Netlify Demo](https://publicapi.netlify.app/)
 
 ## Screenshots
 ![Screenshot1](src/assets/img/1.png)
