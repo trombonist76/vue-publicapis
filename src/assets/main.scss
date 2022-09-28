@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#app {
+  height: 100vh;
+  min-height: 100%;
+  font-family: "Sora", sans-serif;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0.4em;
+
+  &-track {
+    background: lighten(#31304a, 6);
+    border-radius: 20px;
+    margin-block: .5em;
+  }
+
+  &-thumb {
+    background: darken(#31304a, 4);
+    border-radius: 20px;
+  }
+}
