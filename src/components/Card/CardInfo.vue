@@ -3,21 +3,22 @@
 <script setup>
 import { computed } from 'vue';
 
-const props = defineProps(["label", "value"])
+const props = defineProps(["label", "data"])
 
 const iconConditions = computed(() => ({
-  "xmark": !props.value || props.value === "no",
-  "check": props.value === true || props.value === "yes",
-  "question": props.value === "unknown"
+  "xmark": !props.data || props.data === "no",
+  "check": props.data === true || props.data === "yes",
+  "question": props.data === "unknown"
 }))
 
+const icon = computed(() => Object.keys(iconConditions.value).find(k => iconConditions.value[k] === true))
 const iconColor = computed(() => ({
   "text-red-500": icon.value === "xmark",
   "text-green-500": icon.value === "check",
   "text-yellow-500": icon.value === "question"
 }))
 
-const icon = computed(() => Object.keys(iconConditions.value).find(k => iconConditions.value[k] === true))
+
 
 </script>
 
@@ -27,9 +28,9 @@ const icon = computed(() => Object.keys(iconConditions.value).find(k => iconCond
     {{props.label}}:
     <span>
       <template v-if="!icon">
-        {{props.value}}
+        {{props.data}}
       </template>
-      <fa :icon="icon" :class="iconColor" />
+      <fa v-if="icon" :icon="icon" :class="iconColor" />
     </span>
   </div>
 </template>

@@ -1,16 +1,17 @@
 # public-apis
+[Publicapis Repository](https://github.com/public-apis/public-apis)
+This repository listing public apis with using the above repository
 
-This template should help get you started developing with Vue 3 in Vite.
+## Demo
+[Netlify Demo](https://github.com/public-apis/public-apis)
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Screenshots
+![Screenshot1](src/assets/img/1.png)
+![Screenshot2](src/assets/img/2.png)
+![Screenshot3](src/assets/img/3.png)
 
 ## Project Setup
+This template should help get you started developing with Vue 3 in Vite.
 
 ```sh
 npm install

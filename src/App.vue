@@ -32,7 +32,7 @@ watchEffect(async () => {
     <div class="flex-1 relative flex overflow-y-hidden h-full max-h-full">
       <Sidebar :title="sidebarTitle" :activeCategory="activeCategory" @setCategory="activeCategoryHandler" />
       <main
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 content-start px-4 ml-14 sm:ml-0 lg:px-20 py-4 overflow-y-auto">
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 content-start px-4 ml-14 lg:pr-10 py-4 overflow-y-auto">
         <CardComp v-for="api in publicApis" :key="api" :item="api" />
       </main>
     </div>
