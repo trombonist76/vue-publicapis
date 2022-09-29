@@ -11,7 +11,64 @@ body,
   min-height: 100%;
   font-family: "Sora", sans-serif;
   color: white;
+  
 }
+@layer components{
+
+  .flex-column{
+    @apply flex flex-col
+  }
+
+  .app{
+    @apply bg-dark min-h-full max-h-screen flex-column
+  }
+
+  .header{
+    @apply h-20 min-h-[80px] border-b border-slate-600 flex items-center px-6 tracking-widest;
+  }
+
+  .wrapper{
+    @apply flex-1 relative flex overflow-y-hidden h-full max-h-full
+  }
+
+  .main{
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 content-start py-4 px-14 overflow-y-auto
+  }
+
+  .sidebar{
+    @apply flex absolute md:static w-2/3 sm:w-1/3 md:w-1/3 lg:w-1/5 top-0 bottom-0 bg-dark transition-[width] shrink-0 ease-in-out delay-150 overflow-hidden
+  }
+
+  .sidebar__wrapper{
+    @apply flex-column gap-y-8 py-4 w-full h-full
+  }
+
+  .sidebar__list{
+    @apply flex-column gap-y-2 overflow-y-auto
+  }
+
+  .hide{
+    @apply bg-dark-light w-full rounded-md mb-10 py-2
+  }
+
+  .show{
+    @apply absolute rounded-full bg-dark-light transition-all delay-150 mb-0.5 h-10 w-10 bottom-14 left-3
+  }
+
+  .card{
+    @apply flex-column gap-2 w-full bg-dark-deep bg-opacity-40 p-5 rounded-md min-h-[300px] self-start
+  }
+
+  .card__informations{
+    @apply flex-column gap-1 mt-auto px-1
+  }
+
+  .badge{
+    @apply text-left text-sm bg-dark-deep bg-opacity-30 py-2 px-6 rounded-md inline-flex mr-4
+  }
+}
+
+
 
 ::-webkit-scrollbar {
   width: 0.4em;

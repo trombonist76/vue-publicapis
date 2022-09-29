@@ -11,15 +11,12 @@ const iconConditions = computed(() => ({
   "question": props.data === "unknown"
 }))
 
-const icon = computed(() => Object.keys(iconConditions.value).find(k => iconConditions.value[k] === true))
+const icon = computed(() => Object.keys(iconConditions.value).find(iconName => iconConditions.value[iconName] === true))
 const iconColor = computed(() => ({
   "text-red-500": icon.value === "xmark",
   "text-green-500": icon.value === "check",
   "text-yellow-500": icon.value === "question"
 }))
-
-
-
 </script>
 
 <template>
