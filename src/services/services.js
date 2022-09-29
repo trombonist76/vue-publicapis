@@ -2,7 +2,6 @@
 // fetchCategories api'dan kategorileri çeker.
 // fetchEntriesByCategoryName ise kullanıcının seçtiği kategori ismine göre public apileri çeker.
 
-
 import axios from "axios";
 
 //https://api.publicapis.org
@@ -15,7 +14,7 @@ export async function fetchCategories() {
 }
 
 export async function fetchEntriesByCategoryName(categoryName) {
-  const url = `${baseUrl}/entries?category=${categoryName}`;
+  const url = `${baseUrl}/entries?category=${categoryName}`
   const data = await axios.get(url).then((result) => result.data);
   return data;
 }
