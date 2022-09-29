@@ -19,7 +19,7 @@ const activeCategoryHandler = (name) => {
 }
 
 watchEffect(async () => {
-  const data = await fetchEntriesByCategoryName()
+  const data = await fetchEntriesByCategoryName(activeCategory.value)
   publicApis.value = data.entries
 })
 
